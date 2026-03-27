@@ -204,6 +204,22 @@ export default function QuadratoCalculator() {
 
         {/* Main Container */}
         <div className="max-w-4xl mx-auto px-4 py-8 sm:py-12">
+          {/* Help Section */}
+          <div className="mb-6 p-4 rounded-xl bg-slate-900/50 border border-purple-500/20">
+            <h2 className="text-sm sm:text-base font-semibold text-purple-200 uppercase tracking-wider mb-2">
+              Guida rapida (IT)
+            </h2>
+            <p className="text-sm text-purple-300/80 leading-relaxed">
+              Inserisci la tua data di nascita e le iniziali di nome/cognome (massimo 3 lettere ciascuno),
+              quindi clicca su "Calcola il Quadrato".
+              Il sistema genera una griglia di 7 colonne con valori numerologici calcolati.
+            </p>
+            <p className="text-xs text-purple-300/60 mt-2">
+              Se vuoi reimpostare i campi, usa il pulsante "Nuovo Calcolo" dopo il risultato.
+                In caso di errori nei campi (es. giorno &gt; 31), lascia i campi vuoti e riscrivi.
+            </p>
+          </div>
+
           {!showSquare ? (
             // Input Form
             <div className="space-y-6">
