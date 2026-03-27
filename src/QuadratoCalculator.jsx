@@ -354,7 +354,7 @@ export default function QuadratoCalculator() {
               {/* The 7x7 Grid */}
               <div className="overflow-x-auto">
                 <div className="inline-block min-w-full bg-gradient-to-br from-purple-950/50 to-blue-950/50 border border-purple-500/30 rounded-xl p-4 sm:p-6 backdrop-blur-sm">
-                  <table className="border-collapse">
+                  <table className="quadrato-table" aria-label="Quadrato numerologico">
                     <thead>
                       <tr>
                         <th className="w-8 h-8 sm:w-10 sm:h-10"></th>
@@ -377,16 +377,13 @@ export default function QuadratoCalculator() {
                             return (
                               <td
                                 key={`${colIndex}-${row}`}
-                                className={`
-                                  w-8 h-8 sm:w-10 sm:h-10 text-xs sm:text-sm font-light
-                                  border border-purple-500/30
-                                  flex items-center justify-center
-                                  transition duration-200
-                                  ${isCenter 
-                                    ? 'bg-gradient-to-br from-yellow-500/30 to-orange-500/30 border-yellow-400/50 text-yellow-100 font-semibold' 
-                                    : 'bg-slate-900/30 text-purple-200 hover:bg-purple-900/30'
-                                  }
-                                `}
+                                className={isCenter ? 'center' : ''}
+                                style={{
+                                  fontSize: '0.78rem',
+                                  fontWeight: isCenter ? 700 : 500,
+                                  color: isCenter ? '#fde68a' : '#e0e7ff',
+                                  background: isCenter ? 'rgba(245, 158, 11, 0.3)' : 'transparent',
+                                }}
                               >
                                 {value}
                               </td>
